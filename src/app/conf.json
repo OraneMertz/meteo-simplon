@@ -1,0 +1,6 @@
+{
+    "city": "Niort",
+    "apiKey" : "2c57ef45ebdf36f05bdc52df8555204c",
+    "baseApiUrl": "https://api.openweathermap.org/data/2.5/weather",
+    "refresh": 3600000
+}
