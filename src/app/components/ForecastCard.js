@@ -3,6 +3,7 @@
 import styles from './ForecastCard.module.css';
 import {getWeatherImage} from "../display";
 import {formatTemperature} from "../utils/weatherMapper";
+import {translateWmoCode} from "../utils/weatherTranslations";
 
 export default function ForecastCard({ forecastData }) {
     if (!forecastData?.daily || forecastData.daily.length === 0) {
@@ -38,11 +39,10 @@ export default function ForecastCard({ forecastData }) {
                                 <span className={styles.max}>
                                   {formatTemperature(forecast.temp.max)}°
                                 </span>
-                                <span className={styles.min}>
+                                                <span className={styles.min}>
                                   {formatTemperature(forecast.temp.min)}°
                                 </span>
                             </div>
-                            <p className={styles.description}>{forecast.weather[0].main}</p>
                         </div>
                     );
                 })}

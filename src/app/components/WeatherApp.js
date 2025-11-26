@@ -18,7 +18,6 @@ export default function WeatherApp({ defaultCity }) {
     return (
         <main className={styles.main}>
             <div className={styles.container}>
-                <h1 className={styles.title}>Météo en Direct</h1>
 
                 <SearchBar onSearch={handleSearch} isLoading={forecastLoading} />
 
