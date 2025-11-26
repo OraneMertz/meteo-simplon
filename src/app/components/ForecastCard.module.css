@@ -1,0 +1,91 @@
+.container {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    backdrop-filter: blur(10px);
+    transition: all 300ms ease;
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.date {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin: 0 0 0.5rem;
+    text-transform: capitalize;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin: 0.5rem auto;
+    object-fit: contain;
+}
+
+.temps {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.max {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.min {
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+.description {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    margin: 0.5rem 0 0;
+    text-transform: capitalize;
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 0.75rem;
+    }
+
+    .card {
+        padding: 0.75rem;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+}
